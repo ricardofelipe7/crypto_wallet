@@ -6,21 +6,26 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+spinner = TTY::Spinner.new("[:spinner] Cadastrando Moedas...")
+spinner.auto_spin
 
-Coin.create!(
-  description: "Bitcoin",
-  acronym: "BTC",
-  url_image: "https://w7.pngwing.com/pngs/450/133/png-transparent-bitcoin-cryptocurrency-virtual-currency-decal-blockchain-info-bitcoin-text-trademark-logo.png"
-)
+coins = [
+  {description: "Bitcoin",
+   acronym: "BTC",
+   url_image: "https://w7.pngwing.com/pngs/450/133/png-transparent-bitcoin-cryptocurrency-virtual-currency-decal-blockchain-info-bitcoin-text-trademark-logo.png"
+  },
+  {
+    description: "Ethereum",
+    acronym: "ETH",
+    url_image: "https://png.pngtree.com/png-vector/20210427/ourmid/pngtree-ethereum-cryptocurrency-coin-icon-png-image_3246438.jpg"
+  },
+  {
+    description: "Dash",
+    acronym: "DASH",
+    url_image: "https://s2.coinmarketcap.com/static/img/coins/200x200/131.png"}
+]
 
-Coin.create!(
-  description: "Ethereum",
-  acronym: "ETH",
-  url_image: "https://png.pngtree.com/png-vector/20210427/ourmid/pngtree-ethereum-cryptocurrency-coin-icon-png-image_3246438.jpg"
-)
+coins.each { |coin| Coin.find_or_create_by!(coin) }
 
-Coin.create!(
-  description: "Dash",
-  acronym: "DASH",
-  url_image: "https://s2.coinmarketcap.com/static/img/coins/200x200/131.png"
-)
+#sleep(1)
+spinner.success("Concluido!")

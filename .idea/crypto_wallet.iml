@@ -76,6 +76,7 @@
     <orderEntry type="library" scope="PROVIDED" name="rails (v7.0.5, RVM: ruby-3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails-dom-testing (v2.0.3, RVM: ruby-3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails-html-sanitizer (v1.6.0, RVM: ruby-3.2.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rails-i18n (v7.0.7, RVM: ruby-3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="railties (v7.0.5, RVM: ruby-3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rake (v13.0.6, RVM: ruby-3.2.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="regexp_parser (v2.8.0, RVM: ruby-3.2.2) [gem]" level="application" />
@@ -346,6 +347,8 @@
           </RakeTaskImpl>
           <RakeTaskImpl id="dev">
             <subtasks>
+              <RakeTaskImpl description="Cadastra as moedas" fullCommand="dev:add_coins" id="add_coins" />
+              <RakeTaskImpl description="Cadastra os tipos de mineração" fullCommand="dev:add_mining_types" id="add_mining_types" />
               <RakeTaskImpl description="Configura o ambiente de desenvolvimento" fullCommand="dev:setup" id="setup" />
             </subtasks>
           </RakeTaskImpl>

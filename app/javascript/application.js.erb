@@ -2,5 +2,8 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
-<% msg =Time.now < 12 ? 'Bom dia!' : 'Olá!!!' %>
+//= require jquery
+//= require notifyjs_rails
+
+<% msg =Time.now.hour < 12 ? 'Bom dia!' : 'Olá!!!' %>
 alert("<%= msg %>");

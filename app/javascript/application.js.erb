@@ -1,6 +1,8 @@
 // Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
 import "@hotwired/turbo-rails"
 import "controllers"
+//= require jquery
+//= require notify-js-legacy/notify
 
-<% msg =Time.now < 12 ? 'Bom dia!' : 'Olá!!!' %>
+<% msg =Time.now.hour < 12 ? 'Bom dia!' : 'Olá!!!' %>
 alert("<%= msg %>");

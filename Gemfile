@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'rails-i18n'
 gem 'tty-spinner'
+gem 'bootstrap'
 
 ruby "3.2.2"
 

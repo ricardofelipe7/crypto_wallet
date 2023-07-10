@@ -7,17 +7,20 @@ Rails.application.config.assets.version = "1.0"
 # Rails.application.config.assets.paths << Emoji.images_path
 
 # Precompile additional assets.
-# application.js, application.css, and all non-JS/CSS in the app/assets
+# application.js.erb, application.scss, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 #
-#Rails.application.config.assets.precompile += %w( cable.js
-#                                                 coins.js
-#                                                 mining_types.js
-#                                                 welcome.js
-#                                               )
-#Rails.application.config.assets.precompile += %w( coins.css
-#                                                 mining_types.css
-#                                                 scaffolds.css
-#                                                 welcome.css
-#                                               )
+Rails.application.config.assets.precompile += %w( bootstrap.min.js
+                                                  popper.js
+                                                  jquery.js
+                                                  cable.js
+                                                  coins.js
+                                                  mining_types.js
+                                                  welcome.js
+                                                )
+Rails.application.config.assets.precompile += %w( coins.css
+                                                  mining_types.css
+                                                  scaffolds.css
+                                                  welcome.css
+                                                )
